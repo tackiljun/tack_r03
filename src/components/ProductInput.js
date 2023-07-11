@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { postProduct } from "../api/productAPI";
 
 
 const initState = {
@@ -21,7 +22,7 @@ const ProductInput = () => {
     }
 
     const handleClickSave = (e) => {
-        
+
         //console.log(board)
         //setBoard({...initState})
         const formData = new FormData();
@@ -37,6 +38,8 @@ const ProductInput = () => {
         for(let file of arr) {
             formData.append("images", file)  // 첨부파일을 받을때.
         }
+
+        postProduct(formData)
     }
 
     const handleClickClear = (e) => {
