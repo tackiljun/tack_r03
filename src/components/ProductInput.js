@@ -3,9 +3,9 @@ import { postProduct } from "../api/productAPI";
 
 
 const initState = {
-    pname:'',
-    pdesc:'',
-    price:0
+    pname:'Ice Coffee',
+    pdesc:'Coffee.....',
+    price:4000
 }
 
 
